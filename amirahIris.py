@@ -26,10 +26,8 @@ st.write('Accuracy of RBF SVC classifier on training set: {:.2f}'
 st.write('Accuracy of RBF SVC classifier on test set: {:.2f}'
      .format(clf.score(Xtest, ytest)))
 
-#Confusion matrix SVM: 
-model = SVC()                       
-model.fit(Xtrain, ytrain)   
-ymodel = model.predict(xtest)
+#Confusion matrix SVM:   
+ymodel = model.predict(Xtest)
 
 a = accuracy_score(ytest, ymodel) 
 st.write("Accuracy score:", a)
